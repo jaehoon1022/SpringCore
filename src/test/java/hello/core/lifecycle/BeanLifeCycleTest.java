@@ -19,7 +19,8 @@ public class BeanLifeCycleTest {
 
     @Configuration
     static class LifeCycleConfig{ //destroyMethod의 기본값은 inferred(추론)기능이있다. close,shutdown
-        @Bean(initMethod = "init", destroyMethod = "close")
+//        @Bean(initMethod = "init", destroyMethod = "close")
+        @Bean
         public NetworkClient networkClient(){
             NetworkClient networkClient = new NetworkClient();
             networkClient.setUrl("http://hello-spring.dev");
